@@ -32,22 +32,21 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-intl:
+        specifier: ^6.7.0
+        version: 6.7.0(react@18.3.1)(typescript@4.9.5)
+      react-router-dom:
+        specifier: ^6.26.2
+        version: 6.26.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-scripts:
         specifier: 5.0.1
-        version: 5.0.1(@babel/plugin-syntax-flow@7.25.7(@babel/core@7.25.7))(@babel/plugin-transform-react-jsx@7.25.7(@babel/core@7.25.7))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5)
+        version: 5.0.1(@babel/plugin-syntax-flow@7.25.7(@babel/core@7.25.7))(@babel/plugin-transform-react-jsx@7.25.7(@babel/core@7.25.7))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.3.1)(sass@1.79.4)(type-fest@0.21.3)(typescript@4.9.5)
+      sass:
+        specifier: ^1.79.4
+        version: 1.79.4
       web-vitals:
         specifier: ^2.1.4
         version: 2.1.4
-
-  packages/www:
-    dependencies:
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-    devDependencies:
-      nodemon:
-        specifier: ^3.1.7
-        version: 3.1.7
 
 packages:
 
@@ -895,6 +894,35 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
+  '@formatjs/ecma402-abstract@2.0.0':
+    resolution: {integrity: sha512-rRqXOqdFmk7RYvj4khklyqzcfQl9vEL/usogncBHRZfZBDOwMGuSRNFl02fu5KGHXdbinju+YXyuR+Nk8xlr/g==}
+
+  '@formatjs/fast-memoize@2.2.0':
+    resolution: {integrity: sha512-hnk/nY8FyrL5YxwP9e4r9dqeM6cAbo8PeU9UjyXojZMNvVad2Z06FAVHyR3Ecw6fza+0GH7vdJgiKIVXTMbSBA==}
+
+  '@formatjs/icu-messageformat-parser@2.7.8':
+    resolution: {integrity: sha512-nBZJYmhpcSX0WeJ5SDYUkZ42AgR3xiyhNCsQweFx3cz/ULJjym8bHAzWKvG5e2+1XO98dBYC0fWeeAECAVSwLA==}
+
+  '@formatjs/icu-skeleton-parser@1.8.2':
+    resolution: {integrity: sha512-k4ERKgw7aKGWJZgTarIcNEmvyTVD9FYh0mTrrBMHZ1b8hUu6iOJ4SzsZlo3UNAvHYa+PnvntIwRPt1/vy4nA9Q==}
+
+  '@formatjs/intl-displaynames@6.6.8':
+    resolution: {integrity: sha512-Lgx6n5KxN16B3Pb05z3NLEBQkGoXnGjkTBNCZI+Cn17YjHJ3fhCeEJJUqRlIZmJdmaXQhjcQVDp6WIiNeRYT5g==}
+
+  '@formatjs/intl-listformat@7.5.7':
+    resolution: {integrity: sha512-MG2TSChQJQT9f7Rlv+eXwUFiG24mKSzmF144PLb8m8OixyXqn4+YWU+5wZracZGCgVTVmx8viCf7IH3QXoiB2g==}
+
+  '@formatjs/intl-localematcher@0.5.4':
+    resolution: {integrity: sha512-zTwEpWOzZ2CiKcB93BLngUX59hQkuZjT2+SAQEscSm52peDW/getsawMcWF1rGRpMCX6D7nSJA3CzJ8gn13N/g==}
+
+  '@formatjs/intl@2.10.5':
+    resolution: {integrity: sha512-f9qPNNgLrh2KvoFvHGIfcPTmNGbyy7lyyV4/P6JioDqtTE7Akdmgt+ZzVndr+yMLZnssUShyTMXxM/6aV9eVuQ==}
+    peerDependencies:
+      typescript: ^4.7 || 5
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
     engines: {node: '>=10.10.0'}
@@ -1070,6 +1098,10 @@ packages:
         optional: true
       webpack-plugin-serve:
         optional: true
+
+  '@remix-run/router@1.19.2':
+    resolution: {integrity: sha512-baiMx18+IMuD1yyvOGaHM9QrVUPGGG0jC+z+IPHnRJWUAUvaKuWKyE8gjDj2rzv3sz9zOGoRSPgeBVHRhZnBlA==}
+    engines: {node: '>=14.0.0'}
 
   '@rollup/plugin-babel@5.3.1':
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
@@ -1252,6 +1284,9 @@ packages:
 
   '@types/graceful-fs@4.1.9':
     resolution: {integrity: sha512-olP3sd1qOEe5dXTSaFvQG+02VdRXcdytWLAZsAq1PecU8uqQAhkrnbli7DagjtXKW/Bl7YJbUsa8MPcuc8LHEQ==}
+
+  '@types/hoist-non-react-statics@3.3.5':
+    resolution: {integrity: sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg==}
 
   '@types/html-minifier-terser@6.1.0':
     resolution: {integrity: sha512-oh/6byDPnL1zeNXFrDXFLyZjkr1MsBG667IM792caf1L2UPOOMf65NFzjUH/ltyfwjAGfs1rsX1eftK0jC/KIg==}
@@ -1870,6 +1905,10 @@ packages:
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
+
+  chokidar@4.0.1:
+    resolution: {integrity: sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA==}
+    engines: {node: '>= 14.16.0'}
 
   chrome-trace-event@1.0.4:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
@@ -2900,6 +2939,9 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
+  hoist-non-react-statics@3.3.2:
+    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
+
   hoopy@0.1.4:
     resolution: {integrity: sha512-HRcs+2mr52W0K+x8RzcLzuPPmVIKMSv97RGHy0Ea9y/mpcaK+xTrjICA04KAHi4GRzxliNqNJEFYWHghy3rSfQ==}
     engines: {node: '>= 6.0.0'}
@@ -3007,6 +3049,9 @@ packages:
   immer@9.0.21:
     resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
 
+  immutable@4.3.7:
+    resolution: {integrity: sha512-1hqclzwYwjRDFLjcFxOM5AYkkG0rpFPpr1RLPMEuGczoS7YA8gLhy8SWXYRAA/XwfEHpfo3cw5JGioS32fnMRw==}
+
   import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -3040,6 +3085,9 @@ packages:
   internal-slot@1.0.7:
     resolution: {integrity: sha512-NGnrKwXzSms2qUUih/ILZ5JBqNTSa1+ZmP6flaIp6KmSElgE9qdndzS3cqjrDovwFdmwsGsLdeFgB6suw+1e9g==}
     engines: {node: '>= 0.4'}
+
+  intl-messageformat@10.5.14:
+    resolution: {integrity: sha512-IjC6sI0X7YRjjyVH9aUgdftcmZK7WXdHeil4KwbjDnRWjnVitKpAx3rr6t6di1joFp5188VqKcobOPA6mCLG/w==}
 
   ipaddr.js@1.9.1:
     resolution: {integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==}
@@ -4507,6 +4555,15 @@ packages:
   react-error-overlay@6.0.11:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==}
 
+  react-intl@6.7.0:
+    resolution: {integrity: sha512-f5QhjuKb+WEqiAbL5hDqUs2+sSRkF0vxkTbJ4A8ompt55XTyOHcrDlCXGq4o73ywFFrpgz+78C9IXegSLlya2A==}
+    peerDependencies:
+      react: ^16.6.0 || 17 || 18
+      typescript: ^4.7 || 5
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -4519,6 +4576,19 @@ packages:
   react-refresh@0.11.0:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}
     engines: {node: '>=0.10.0'}
+
+  react-router-dom@6.26.2:
+    resolution: {integrity: sha512-z7YkaEW0Dy35T3/QKPYB1LjMK2R1fxnHO8kWpUMTBdfVzZrWOiY9a7CtN8HqdWtDUWd5FY6Dl8HFsqVwH4uOtQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+
+  react-router@6.26.2:
+    resolution: {integrity: sha512-tvN1iuT03kHgOFnLPfLJ8V95eijteveqdOSk+srqfePtQvqCExB8eHOYnlilbOcyJyKnYkr1vJvf7YqotAJu1A==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: '>=16.8'
 
   react-scripts@5.0.1:
     resolution: {integrity: sha512-8VAmEm/ZAwQzJ+GOMLbBsTdDKOpuZh7RPs0UymvBR2vRk4iZWCskjbFnxqjrzoIvlNNRZ3QJFx6/qDSi6zSnaQ==}
@@ -4549,6 +4619,10 @@ packages:
   readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
+
+  readdirp@4.0.2:
+    resolution: {integrity: sha512-yDMz9g+VaZkqBYS/ozoBJwaBhTbZo3UNYQHNRw1D3UFQB8oHB4uS/tAODO+ZLjGWmUbKnIlOWO+aaIiAxrUWHA==}
+    engines: {node: '>= 14.16.0'}
 
   recursive-readdir@2.2.3:
     resolution: {integrity: sha512-8HrF5ZsXk5FAH9dgsx3BlUer73nIhuj+9OrQwEbLTPOBzGkL1lsFCR01am+v+0m2Cmbs1nP12hLDl5FA7EszKA==}
@@ -4715,6 +4789,11 @@ packages:
         optional: true
       sass-embedded:
         optional: true
+
+  sass@1.79.4:
+    resolution: {integrity: sha512-K0QDSNPXgyqO4GZq2HO5Q70TLxTH6cIT59RdoCHMivrC8rqzaTw5ab9prjz9KUN1El4FLXrBXJhik61JR4HcGg==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
 
   sax@1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
@@ -6607,6 +6686,54 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
+  '@formatjs/ecma402-abstract@2.0.0':
+    dependencies:
+      '@formatjs/intl-localematcher': 0.5.4
+      tslib: 2.7.0
+
+  '@formatjs/fast-memoize@2.2.0':
+    dependencies:
+      tslib: 2.7.0
+
+  '@formatjs/icu-messageformat-parser@2.7.8':
+    dependencies:
+      '@formatjs/ecma402-abstract': 2.0.0
+      '@formatjs/icu-skeleton-parser': 1.8.2
+      tslib: 2.7.0
+
+  '@formatjs/icu-skeleton-parser@1.8.2':
+    dependencies:
+      '@formatjs/ecma402-abstract': 2.0.0
+      tslib: 2.7.0
+
+  '@formatjs/intl-displaynames@6.6.8':
+    dependencies:
+      '@formatjs/ecma402-abstract': 2.0.0
+      '@formatjs/intl-localematcher': 0.5.4
+      tslib: 2.7.0
+
+  '@formatjs/intl-listformat@7.5.7':
+    dependencies:
+      '@formatjs/ecma402-abstract': 2.0.0
+      '@formatjs/intl-localematcher': 0.5.4
+      tslib: 2.7.0
+
+  '@formatjs/intl-localematcher@0.5.4':
+    dependencies:
+      tslib: 2.7.0
+
+  '@formatjs/intl@2.10.5(typescript@4.9.5)':
+    dependencies:
+      '@formatjs/ecma402-abstract': 2.0.0
+      '@formatjs/fast-memoize': 2.2.0
+      '@formatjs/icu-messageformat-parser': 2.7.8
+      '@formatjs/intl-displaynames': 6.6.8
+      '@formatjs/intl-listformat': 7.5.7
+      intl-messageformat: 10.5.14
+      tslib: 2.7.0
+    optionalDependencies:
+      typescript: 4.9.5
+
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
@@ -6890,6 +7017,8 @@ snapshots:
       type-fest: 0.21.3
       webpack-dev-server: 4.15.2(webpack@5.95.0)
 
+  '@remix-run/router@1.19.2': {}
+
   '@rollup/plugin-babel@5.3.1(@babel/core@7.25.7)(@types/babel__core@7.20.5)(rollup@2.79.2)':
     dependencies:
       '@babel/core': 7.25.7
@@ -7128,6 +7257,11 @@ snapshots:
   '@types/graceful-fs@4.1.9':
     dependencies:
       '@types/node': 22.7.4
+
+  '@types/hoist-non-react-statics@3.3.5':
+    dependencies:
+      '@types/react': 18.3.11
+      hoist-non-react-statics: 3.3.2
 
   '@types/html-minifier-terser@6.1.0': {}
 
@@ -7892,6 +8026,10 @@ snapshots:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.3
+
+  chokidar@4.0.1:
+    dependencies:
+      readdirp: 4.0.2
 
   chrome-trace-event@1.0.4: {}
 
@@ -9107,6 +9245,10 @@ snapshots:
 
   he@1.2.0: {}
 
+  hoist-non-react-statics@3.3.2:
+    dependencies:
+      react-is: 16.13.1
+
   hoopy@0.1.4: {}
 
   hpack.js@2.1.6:
@@ -9231,6 +9373,8 @@ snapshots:
 
   immer@9.0.21: {}
 
+  immutable@4.3.7: {}
+
   import-fresh@3.3.0:
     dependencies:
       parent-module: 1.0.1
@@ -9261,6 +9405,13 @@ snapshots:
       es-errors: 1.3.0
       hasown: 2.0.2
       side-channel: 1.0.6
+
+  intl-messageformat@10.5.14:
+    dependencies:
+      '@formatjs/ecma402-abstract': 2.0.0
+      '@formatjs/fast-memoize': 2.2.0
+      '@formatjs/icu-messageformat-parser': 2.7.8
+      tslib: 2.7.0
 
   ipaddr.js@1.9.1: {}
 
@@ -10980,6 +11131,22 @@ snapshots:
 
   react-error-overlay@6.0.11: {}
 
+  react-intl@6.7.0(react@18.3.1)(typescript@4.9.5):
+    dependencies:
+      '@formatjs/ecma402-abstract': 2.0.0
+      '@formatjs/icu-messageformat-parser': 2.7.8
+      '@formatjs/intl': 2.10.5(typescript@4.9.5)
+      '@formatjs/intl-displaynames': 6.6.8
+      '@formatjs/intl-listformat': 7.5.7
+      '@types/hoist-non-react-statics': 3.3.5
+      '@types/react': 18.3.11
+      hoist-non-react-statics: 3.3.2
+      intl-messageformat: 10.5.14
+      react: 18.3.1
+      tslib: 2.7.0
+    optionalDependencies:
+      typescript: 4.9.5
+
   react-is@16.13.1: {}
 
   react-is@17.0.2: {}
@@ -10988,7 +11155,19 @@ snapshots:
 
   react-refresh@0.11.0: {}
 
-  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.25.7(@babel/core@7.25.7))(@babel/plugin-transform-react-jsx@7.25.7(@babel/core@7.25.7))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5):
+  react-router-dom@6.26.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      '@remix-run/router': 1.19.2
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-router: 6.26.2(react@18.3.1)
+
+  react-router@6.26.2(react@18.3.1):
+    dependencies:
+      '@remix-run/router': 1.19.2
+      react: 18.3.1
+
+  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.25.7(@babel/core@7.25.7))(@babel/plugin-transform-react-jsx@7.25.7(@babel/core@7.25.7))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.3.1)(sass@1.79.4)(type-fest@0.21.3)(typescript@4.9.5):
     dependencies:
       '@babel/core': 7.25.7
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.11.0)(type-fest@0.21.3)(webpack-dev-server@4.15.2(webpack@5.95.0))(webpack@5.95.0)
@@ -11028,7 +11207,7 @@ snapshots:
       react-refresh: 0.11.0
       resolve: 1.22.8
       resolve-url-loader: 4.0.0
-      sass-loader: 12.6.0(webpack@5.95.0)
+      sass-loader: 12.6.0(sass@1.79.4)(webpack@5.95.0)
       semver: 7.6.3
       source-map-loader: 3.0.2(webpack@5.95.0)
       style-loader: 3.3.4(webpack@5.95.0)
@@ -11102,6 +11281,8 @@ snapshots:
   readdirp@3.6.0:
     dependencies:
       picomatch: 2.3.1
+
+  readdirp@4.0.2: {}
 
   recursive-readdir@2.2.3:
     dependencies:
@@ -11251,11 +11432,19 @@ snapshots:
 
   sanitize.css@13.0.0: {}
 
-  sass-loader@12.6.0(webpack@5.95.0):
+  sass-loader@12.6.0(sass@1.79.4)(webpack@5.95.0):
     dependencies:
       klona: 2.0.6
       neo-async: 2.6.2
       webpack: 5.95.0
+    optionalDependencies:
+      sass: 1.79.4
+
+  sass@1.79.4:
+    dependencies:
+      chokidar: 4.0.1
+      immutable: 4.3.7
+      source-map-js: 1.2.1
 
   sax@1.2.4: {}
 
